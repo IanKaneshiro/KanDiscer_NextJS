@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -26,7 +27,9 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <img
+          <Image
+            width={1000}
+            height={1000}
             className={styles.img}
             src="https://res.cloudinary.com/dmkyocbqi/image/upload/v1695679466/diavolo-disc-golf-cary-nc-4_r4otk7.jpg"
             alt="Disc golf basket with forest backdrop"
@@ -35,7 +38,9 @@ export default function Home() {
       </div>
       <div className="home__info_container">
         <div>
-          <img
+          <Image
+            width={2000}
+            height={2000}
             className={styles.img}
             src="https://res.cloudinary.com/dmkyocbqi/image/upload/v1698600968/Screenshot_2023-10-29_103542_g1mtvx.png"
             alt="Course map"
