@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,8 +16,12 @@ export default function Home() {
               more fun on the course.
             </p>
             <div className={styles.infoButtons}>
-              <button className={styles.btns}>Browse Discs</button>
-              <button className={styles.btns}>Get Started</button>
+              <Link href="/discs">
+                <button className={styles.btns}>Browse Discs</button>
+              </Link>
+              <Link href="/bags">
+                <button className={styles.btns}>Get Started</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -45,7 +50,9 @@ export default function Home() {
             and interactive way to play
           </p>
           <div className={styles.infoButtons}>
-            <button className={styles.btns}>Browse Courses</button>
+            <Link href="/courses">
+              <button className={styles.btns}>Browse Courses</button>
+            </Link>
           </div>
         </div>
       </div>
