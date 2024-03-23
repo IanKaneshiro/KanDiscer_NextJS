@@ -2,6 +2,8 @@
 import style from "./about.module.css";
 import { useState, useRef } from "react";
 
+const discs = [{ id: 1, name: "Zeus" }];
+
 const page = () => {
   const [nameFilter, setNameFilter] = useState("");
   const [showFilters, setShowFilters] = useState(true);
@@ -36,26 +38,27 @@ const page = () => {
               : "disc_landing__filters"
           }
         >
-          <DiscFilterBar filters={filters} setFilters={setFilters} />
-          <div className="disc_landing__submit">
+          {/* <DiscFilterBar filters={filters} setFilters={setFilters} /> */}
+          {/* <div className="disc_landing__submit">
             {!sessionUser?.admin && <h3>Don't see your disc?</h3>}
             <OpenModalButton
               modalComponent={<CreateDiscForm />}
               buttonText={sessionUser?.admin ? "Add Disc" : "Request "}
             />
-          </div>
+          </div> */}
         </div>
         <div className="disc_landing__main">
           {discs.length ? (
             discs.map((disc) => (
-              <OpenModalDiv
-                className="disc-landing__title"
-                key={disc.id}
-                component={<DiscTile disc={disc} />}
-                modalComponent={
-                  <DiscDetailsModal sessionUser={sessionUser} disc={disc} />
-                }
-              />
+              <div key={disc.id}>{disc.name}</div>
+              // <OpenModalDiv
+              //   className="disc-landing__title"
+              //   key={disc.id}
+              //   component={<DiscTile disc={disc} />}
+              //   modalComponent={
+              //     <DiscDetailsModal sessionUser={sessionUser} disc={disc} />
+              //   }
+              // />
             ))
           ) : (
             <div
