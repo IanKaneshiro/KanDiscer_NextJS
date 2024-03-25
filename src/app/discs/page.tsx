@@ -1,5 +1,5 @@
 "use client";
-import style from "./about.module.css";
+import style from "./discs.module.css";
 import { useState, useRef } from "react";
 
 const discs = [{ id: 1, name: "Zeus" }];
