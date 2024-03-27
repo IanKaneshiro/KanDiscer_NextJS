@@ -4,10 +4,10 @@ import style from "./courses.module.css";
 const CoursesLandingPage = () => {
   return (
     <div className="course-landing__container">
-      <div className="course-landing-start-round">
+      <div className={style.startRound}>
         <button>Add Course</button>
       </div>
-      <div className="course-landing__main">
+      <div className={style.main}>
         <Link href="courses/courseId">Stewart Pond</Link>
       </div>
     </div>

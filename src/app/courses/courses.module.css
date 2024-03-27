@@ -1,4 +1,4 @@
-.course-landing-start-round > button {
+.startRound {
   background-color: #284b63;
   margin: 10px;
   width: 100px;
@@ -7,7 +7,7 @@
   color: white;
 }
 
-.course-landing__main {
+.main {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
