@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import style from "./bags.module.css";
 import Link from "next/link";
 
