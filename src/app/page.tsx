@@ -50,7 +50,7 @@ export default function Home() {
           <h1>Courses</h1>
           <p>
             Check out brand-new score-keeping feature, allowing you to
-            meticulously track your rounds and improve your game. It's the
+            meticulously track your rounds and improve your game. Its the
             ultimate companion for disc golf enthusiasts, offering an immersive
             and interactive way to play
           </p>
