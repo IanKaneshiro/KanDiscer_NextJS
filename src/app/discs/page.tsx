@@ -1,50 +1,20 @@
-"use client";
 import style from "./discs.module.css";
-import { useState } from "react";
 
 const discs = [{ id: 1, name: "Zeus" }];
 
 const Page = () => {
-  const [nameFilter, setNameFilter] = useState("");
-  const [showFilters, setShowFilters] = useState(true);
-
-  const handleFilter = () => {
-    setShowFilters(!showFilters);
-  };
-
   return (
     <main className="disc_landing__container">
       <div className="disc_landing__search">
-        <button className="disc_landing__filter-btn" onClick={handleFilter}>
+        <button className="disc_landing__filter-btn">
           <i
             className="fa-solid fa-filter fa-2xl"
             style={{ color: "#284b63" }}
           ></i>
         </button>
-        <input
-          type="text"
-          value={nameFilter}
-          placeholder="Search by name..."
-          onChange={(e) => setNameFilter(e.target.value)}
-        />
+        <input type="text" placeholder="Search by name..." />
       </div>
       <div className="disc_landing__discs">
-        <div
-          className={
-            showFilters
-              ? "disc_landing__filters hide-filters"
-              : "disc_landing__filters"
-          }
-        >
-          {/* <DiscFilterBar filters={filters} setFilters={setFilters} /> */}
-          {/* <div className="disc_landing__submit">
-            {!sessionUser?.admin && <h3>Don't see your disc?</h3>}
-            <OpenModalButton
-              modalComponent={<CreateDiscForm />}
-              buttonText={sessionUser?.admin ? "Add Disc" : "Request "}
-            />
-          </div> */}
-        </div>
         <div className="disc_landing__main">
           {discs.length ? (
             discs.map((disc) => (
