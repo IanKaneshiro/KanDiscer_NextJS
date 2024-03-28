@@ -8,7 +8,7 @@ const CoursesLandingPage = () => {
         <button>Add Course</button>
       </div>
       <div className={style.main}>
-        <Link href="courses/courseId">Stewart Pond</Link>
+        <Link href="courses/1">Stewart Pond</Link>
       </div>
     </div>
   );
