@@ -1,13 +1,12 @@
 "use client";
 import style from "./discs.module.css";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 const discs = [{ id: 1, name: "Zeus" }];
 
-const page = () => {
+const Page = () => {
   const [nameFilter, setNameFilter] = useState("");
   const [showFilters, setShowFilters] = useState(true);
-  const ulRef = useRef();
 
   const handleFilter = () => {
     setShowFilters(!showFilters);
@@ -31,7 +30,6 @@ const page = () => {
       </div>
       <div className="disc_landing__discs">
         <div
-          ref={ulRef}
           className={
             showFilters
               ? "disc_landing__filters hide-filters"
@@ -79,4 +77,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
